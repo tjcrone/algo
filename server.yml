@@ -9,10 +9,7 @@
     - block:
         - name: Wait until the cloud-init completed
           wait_for:
-            path: /var/lib/cloud/data/result.json
-            delay: 10
             timeout: 600
-            state: present
           become: false
           when: cloudinit
 
