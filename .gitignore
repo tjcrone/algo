@@ -8,3 +8,5 @@ inventory_users
 venvs/*
 !venvs/.gitinit
 .vagrant
+*.json
+digitalocean_token.txt
