@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
+CONDAENV=`which ansible-playbook`
+
 set -e
+
+if [ "$CONDAENV" == "/opt/homebrew/Caskroom/micromamba/base/envs/algo/bin/ansible-playbook" ]; then
+    echo "Conda algo environment active."
+else
+    echo "Activate Conda algo environment to run this script."
+    exit
+fi
 
 #if [ -z ${VIRTUAL_ENV+x} ]
 #then
